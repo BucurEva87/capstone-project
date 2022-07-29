@@ -41,6 +41,7 @@ header {
   width: 4%;
   top: 4%;
   left: 4%;
+  max-width: 2rem;
 }
 
 div.wrapper {
@@ -251,10 +252,111 @@ footer p {
   font-size: 1.6rem;
 }
 
-
 .bar {
   width: 5.3rem;
   height: 1.6rem;
   border-bottom: 0.1rem solid var(--color-red);
   margin: 0 auto 5.4rem;
+}
+
+.desktop-visible {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-visible {
+    all: unset;
+  }
+
+  .header-bar {
+    padding: 2rem 0;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-bar ul {
+    display: flex;
+    list-style-type: none;
+    color: var(--color-white);
+    gap: 2rem;
+    margin-right: 10%;
+  }
+
+  .header-bar ul li {
+    padding: 0 1rem;
+  }
+
+  .header-bar ul a {
+    text-decoration: none;
+    color: white;
+    font: 2rem var(--lato);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+
+  header ul.desktop-visible {
+    display: flex;
+    list-style-type: none;
+    gap: 2.5vw;
+  }
+
+  header ul.desktop-visible li a {
+    text-decoration: none;
+    font: 1.6rem var(--lato);
+    color: var(--color-another-black);
+  }
+
+  header ul.desktop-visible li a.nav-button {
+    color: var(--color-red);
+    border: 0.5rem solid var(--color-red);
+    padding: 0.5rem;
+  }
+
+  header ul.desktop-visible li a:hover {
+    color: var(--color-red);
+  }
+
+  div.hero-wrapper {
+    background: url(../img/backgrounds/desktop_intro_bg.png) top center no-repeat;
+  }
+
+  .lessons-container {
+    flex-direction: row;
+    max-width: 102.4rem;
+  }
+
+  .lessons-container article {
+    flex-direction: column;
+  }
+
+  .speakers-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .partners-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
 }
