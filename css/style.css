@@ -131,6 +131,8 @@ div.partners-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 96%;
+  margin: 0 auto;
 }
 
 .speakers-container {
@@ -226,6 +228,7 @@ div.partners-wrapper {
   font-size: 1.6rem;
   background-color: white;
   border: 0.1rem solid var(--color-gray);
+  cursor: pointer;
 }
 
 #teachers button img {
