@@ -223,6 +223,10 @@ footer p {
   text-decoration: none;
 }
 
+#lessons > a::after {
+  content: ' >';
+}
+
 .speakers-container {
   max-width: 80rem;
   padding: 0 4rem;
@@ -434,6 +438,16 @@ footer {
 
   .lessons-container article {
     flex-direction: column;
+  }
+  
+  #lessons > a {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  
+  #lessons > a::after {
+    content: '';
   }
 
   .speakers-container {
