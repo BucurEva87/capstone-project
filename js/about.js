@@ -7,6 +7,10 @@ const burgerMenuBackground = utils.qs('div', burgerMenu);
 const header = utils.qs('header');
 const scrollToTop = utils.qs('#scrollToTop');
 
+if (window.innerWidth >= 768) {
+  utils.qs('footer > a img').src = './img/logo_light.png';
+}
+
 const closeMenu = () => {
   const ul = utils.qs('ul', utils.qsa('.mobile-menu div')[1]);
 
@@ -17,7 +21,7 @@ const closeMenu = () => {
       ul.classList.add('desktop-visible');
       utils.qs('header').appendChild(ul);
     },
-    { once: true },
+    { once: true }
   );
 
   burgerMenu.classList.toggle('hidden');
@@ -53,6 +57,12 @@ window.addEventListener('resize', () => {
 
     burgerMenu.classList.toggle('hidden');
     burgerMenuBackground.classList.toggle('hidden');
+
+    utils.qs('footer > a img').src = './img/logo_light.png';
+  } else if (window.innerWidth >= 768) {
+    utils.qs('footer > a img').src = './img/logo_light.png';
+  } else {
+    utils.qs('footer > a img').src = './img/logo.png';
   }
 });
 
