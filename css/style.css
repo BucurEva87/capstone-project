@@ -247,6 +247,16 @@ div.partners-wrapper {
   margin-bottom: 3rem;
 }
 
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partners-container img {
+  width: 16rem;
+}
+
 footer {
   padding: 6rem;
   display: flex;

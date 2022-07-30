@@ -4,7 +4,6 @@ const burgerMenuIcon = utils.qs('header img');
 const burgerMenuIconClose = utils.qs('.mobile-menu img');
 const burgerMenu = utils.qs('.mobile-menu');
 const burgerMenuBackground = utils.qs('div', burgerMenu);
-const menuList = utils.qs('ul.desktop-visible');
 const header = utils.qs('header');
 const scrollToTop = utils.qs('#scrollToTop');
 
@@ -13,7 +12,7 @@ const closeMenu = () => {
 
   burgerMenu.addEventListener(
     'transitionend',
-    (e) => {
+    () => {
       ul.remove();
       ul.classList.add('desktop-visible');
       utils.qs('header').appendChild(ul);

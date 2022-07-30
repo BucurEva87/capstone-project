@@ -7,7 +7,7 @@ import utils from './utils.js';
 export async function grabRandomUser() {
   let results = [];
 
-  while (!results.length) {
+  async function getResults() {
     try {
       const request = await fetch(`https://randomuser.me/api/?results=6`);
       let user = await request.json();
@@ -19,10 +19,14 @@ export async function grabRandomUser() {
           picture: u.picture.large,
         });
       });
-    } catch (e) {}
+
+      populateUsers(results);
+    } catch (e) {
+      getResults();
+    }
   }
 
-  return results;
+  getResults();
 }
 
 const descriptions = [
@@ -34,7 +38,7 @@ const descriptions = [
   'For the past 24 years [name] was the head of the [language] team for Google. While [gender] is not restricting [dative]self to [language], [gender] keeps at heart this programming language, so [gender] secretly wants everyone to learn it.',
 ];
 
-export async function populateUsers(speakers) {
+async function populateUsers(speakers) {
   const container = utils.qs('.speakers-container');
 
   speakers.forEach((speaker) => {
@@ -101,4 +105,15 @@ export async function populateUsers(speakers) {
 
     container.appendChild(article);
   });
+
+  const button = utils.qs('#teachers button');
+
+  button.textContent = 'more';
+  button.appendChild(
+    utils.createElement({
+      tagName: 'img',
+      src: './img/burger/arrow_down.png',
+      alt: 'More speakers',
+    })
+  );
 }
