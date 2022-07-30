@@ -21,7 +21,7 @@ const closeMenu = () => {
       ul.classList.add('desktop-visible');
       utils.qs('header').appendChild(ul);
     },
-    { once: true }
+    { once: true },
   );
 
   burgerMenu.classList.toggle('hidden');
