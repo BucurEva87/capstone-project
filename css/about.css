@@ -66,6 +66,39 @@ div.partners-wrapper {
   background-color: var(--color-black);
 }
 
+.mobile-menu {
+  transition: left;
+  z-index: 100;
+}
+
+.mobile-menu,
+.mobile-menu .background {
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left 1s;
+}
+
+.mobile-menu .background {
+  background-color: var(--color-black);
+  opacity: 0.96;
+}
+
+.mobile-menu div:not(.background) > a {
+  z-index: 200;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+}
+
+.mobile-menu.hidden,
+.mobile-menu .background.hidden {
+  left: -80vw;
+  transition: left 1s;
+}
+
 #hero {
   padding-top: 5.1rem;
   text-align: center;
@@ -77,6 +110,10 @@ div.partners-wrapper {
   padding-top: 7.9rem;
   padding-bottom: 5rem;
   text-align: center;
+}
+
+footer p {
+  font-size: 1.6rem;
 }
 
 #hero p:first-child {
@@ -127,6 +164,10 @@ div.partners-wrapper {
   margin-bottom: 3rem;
 }
 
+.partners-container img {
+  width: 16rem;
+}
+
 #logo img {
   width: 30rem;
   padding: 3rem 5rem;
@@ -172,10 +213,6 @@ div.partners-wrapper {
   justify-content: center;
 }
 
-.partners-container img {
-  width: 16rem;
-}
-
 #partners div {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -188,10 +225,6 @@ footer {
   justify-content: space-between;
 }
 
-footer p {
-  font-size: 1.6rem;
-}
-
 .bar {
   width: 5.3rem;
   height: 1.6rem;
@@ -201,39 +234,6 @@ footer p {
 
 .desktop-visible {
   display: none;
-}
-
-.mobile-menu {
-  transition: left;
-  z-index: 100;
-}
-
-.mobile-menu,
-.mobile-menu .background {
-  width: 80vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: left 1s;
-}
-
-.mobile-menu .background {
-  background-color: var(--color-black);
-  opacity: 0.96;
-}
-
-.mobile-menu div:not(.background) > a {
-  z-index: 200;
-  position: absolute;
-  top: 1rem;
-  right: 3rem;
-}
-
-.mobile-menu.hidden,
-.mobile-menu .background.hidden {
-  left: -80vw;
-  transition: left 1s;
 }
 
 .hidden {
