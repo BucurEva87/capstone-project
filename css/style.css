@@ -364,7 +364,7 @@ footer {
   transition: left 1s;
 }
 
-.hidden {
+.notThere {
   display: none;
 }
 

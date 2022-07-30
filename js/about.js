@@ -17,7 +17,7 @@ const closeMenu = () => {
       ul.classList.add('desktop-visible');
       utils.qs('header').appendChild(ul);
     },
-    { once: true },
+    { once: true }
   );
 
   burgerMenu.classList.toggle('hidden');
@@ -58,14 +58,14 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
   if (header.getBoundingClientRect().bottom < 0) {
-    scrollToTop.classList.remove('hidden');
+    scrollToTop.classList.remove('notThere');
   } else {
-    scrollToTop.classList.add('hidden');
+    scrollToTop.classList.add('notThere');
   }
 });
 
 scrollToTop.addEventListener('click', (e) => {
   e.preventDefault();
   header.scrollIntoView({ behavior: 'smooth' });
-  scrollToTop.classList.add('hidden');
+  scrollToTop.classList.add('notThere');
 });
