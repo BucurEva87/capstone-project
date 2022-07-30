@@ -98,7 +98,7 @@ export default async function grabRandomUser() {
 
   async function getResults() {
     try {
-      const request = await fetch(`https://randomuser.me/api/?results=6`);
+      const request = await fetch('https://randomuser.me/api/?results=6');
       const user = await request.json();
 
       user.results.forEach((u) => {
