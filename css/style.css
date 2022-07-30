@@ -151,13 +151,19 @@ div.partners-wrapper {
   gap: 1rem;
 }
 
-.lesson .icon {
+.lesson .icon object {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(88%) hue-rotate(174deg) brightness(87%) contrast(92%);
+  transition: filter 1s;
+}
 
+.lesson .icon object:hover {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(15%) saturate(5170%) hue-rotate(332deg) brightness(94%) contrast(96%);
 }
 
 #lessons .name h2 {
   font-size: 1.8rem;
   color: var(--color-red);
+  min-width: 8rem;
 }
 
 .lesson .description {
@@ -263,6 +269,77 @@ footer p {
   display: none;
 }
 
+.mobile-menu {
+  transition: left;
+  z-index: 100;
+}
+
+.mobile-menu,
+.mobile-menu .background {
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left 1s;
+}
+
+.mobile-menu .background {
+  background-color: var(--color-black);
+  opacity: 0.96;
+}
+
+.mobile-menu div:not(.background) > a {
+  z-index: 200;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+}
+
+.mobile-menu.hidden,
+.mobile-menu .background.hidden {
+  left: -80vw;
+  transition: left 1s;
+}
+
+.mobile-menu ul {
+  position: relative;
+  width: 96%;
+  top: 4rem;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu ul li {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0 0 2rem;
+  display: flex;
+}
+
+.mobile-menu ul li:last-child {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobile-menu ul li a.nav-button {
+  color: var(--color-red);
+  border: 0.5rem solid var(--color-red);
+  padding: 0.5rem;
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--color-red);
+}
+
 @media screen and (min-width: 768px) {
   .mobile-visible {
     display: none;
@@ -334,7 +411,7 @@ footer p {
 
   .lessons-container {
     flex-direction: row;
-    max-width: 102.4rem;
+    max-width: 152.4rem;
   }
 
   .lessons-container article {
