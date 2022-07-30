@@ -1,5 +1,4 @@
 import utils from './utils.js';
-import { grabRandomUser, populateUsers } from './randomUser.js';
 
 const burgerMenuIcon = utils.qs('header img');
 const burgerMenuIconClose = utils.qs('.mobile-menu img');
@@ -57,23 +56,6 @@ window.addEventListener('resize', () => {
     burgerMenuBackground.classList.toggle('hidden');
   }
 });
-
-const grabSpeakers = async () => {
-  populateUsers(await grabRandomUser());
-
-  const button = utils.qs('#teachers button');
-
-  button.textContent = 'more';
-  button.appendChild(
-    utils.createElement({
-      tagName: 'img',
-      src: './img/burger/arrow_down.png',
-      alt: 'More speakers',
-    })
-  );
-};
-
-grabSpeakers();
 
 window.addEventListener('scroll', () => {
   if (header.getBoundingClientRect().bottom < 0) {

@@ -49,21 +49,15 @@ div.wrapper {
 }
 
 div.hero-wrapper {
-  background: url(../img/backgrounds/mobile_intro_bg.png) top center no-repeat;
+  background: #f7f7f7 url(../img/backgrounds/about_bg_01.png) top left no-repeat;
 }
 
-div.lessons-wrapper {
-  background: var(--color-black) url(../img/backgrounds/main_section_bg.png) repeat;
-  padding-bottom: 8rem;
-  color: white;
-  font: 300 1.4rem var(--lato);
-}
-
-div.teachers-wrapper {
+div.logo-wrapper {
   padding-bottom: 3.5rem;
   border-bottom: 0.1rem solid var(--color-gray);
   color: var(--color-black);
   font: 300 1.4rem var(--lato);
+  border-bottom: 0.1rem solid var(--color-gray);
 }
 
 div.partners-wrapper {
@@ -74,48 +68,48 @@ div.partners-wrapper {
 
 #hero {
   padding-top: 5.1rem;
-  margin: 0 10%;
+  text-align: center;
+  color: var(--color-red);
 }
 
-#lessons {
-  margin: 1.6rem 0;
-  padding-top: 4rem;
-}
-
-#teachers {
+#logo,
+#past-courses {
   padding-top: 7.9rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
 #hero p:first-child {
-  color: var(--color-red);
   font: 400 2.4rem/3.2rem var(--lato);
 }
 
 #hero h1 {
   font: 400 3.6rem/4.8rem var(--cocogoose);
-  background: url(../img/backgrounds/main_text_image_bg.jpg) no-repeat top left;
-  background-size: 150%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 #hero p.description {
-  margin: 1.7rem 0;
-  width: calc(100% + 2.5rem);
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 90rem;
   padding: 1rem;
   font: 300 1.3rem/220% var(--lato);
   text-align: justify;
-  border: 0.4rem solid white;
-  background-color: #F4F4F5
+  border: 0.2rem solid #e7e7e7;
+  background-color: white;
+  color: var(--color-black);
 }
 
 #hero p.location {
   margin-top: 2rem;
   padding: 4rem 0;
   text-align: center;
-  font: normal 1.4rem var(--cocogoose);
+  font: normal 1.4rem var(--lato);
+  color: var(--color-black);
+}
+
+#hero p.location a {
+  text-decoration: none;
+  color: var(--color-black);
 }
 
 #lessons h2,
@@ -128,118 +122,58 @@ div.partners-wrapper {
   color: var(--color-white);
 }
 
-.lessons-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 96%;
+#logo p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+#logo img {
+  width: 30rem;
+  padding: 3rem 5rem;
+  border: 0.1rem solid var(--color-gray);
+}
+
+#past-courses #python-conference,
+#past-courses #php-conference {
+  width: 45.5rem;
+  height: 25.2rem;
   margin: 0 auto;
-}
-
-.speakers-container {
+  font: 2.4rem var(--lato);
+  color: white;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-}
-
-.lesson {
-  display: flex;
-  padding: 1.6rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
-.lesson .icon object {
-  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(88%) hue-rotate(174deg) brightness(87%) contrast(92%);
-  transition: filter 1s;
-}
-
-.lesson .icon object:hover {
-  filter: brightness(0) saturate(100%) invert(44%) sepia(15%) saturate(5170%) hue-rotate(332deg) brightness(94%) contrast(96%);
-}
-
-#lessons .name h2 {
+#past-courses h3 {
   font-size: 1.8rem;
-  color: var(--color-red);
-  min-width: 8rem;
+  margin-top: 1.6rem;
 }
 
-.lesson .description {
-  text-align: justify;
+#past-courses #python-conference {
+  background-image:
+    linear-gradient(to bottom, rgba(208,99,79, 0.75), rgba(208,99,79, 0.75)),
+    url(../img/backgrounds/python_conference.png);
+  margin-bottom: 5rem;
 }
 
-#lessons > a {
-  margin-top: 2rem;
-  padding-right: 1rem;
-  font-size: 2.2rem;
-  color: white;
-  text-align: right;
-  display: block;
-  width: 100%;
-  text-decoration: none;
+#past-courses #php-conference {
+  background-image:
+    linear-gradient(to bottom, rgba(208,99,79, 0.75), rgba(208,99,79, 0.75)),
+    url(../img/backgrounds/php_conference.png);
 }
 
-.speakers-container {
-  max-width: 80rem;
-  padding: 0 4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-
-.speakers-container article {
+.partners-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  justify-content: center;
 }
 
-.speakers-container article img {
-  width: 40%;
-  background: url('../img/chess_board_pattern.svg') no-repeat;
-  padding-top: 2rem;
-  padding-left: 2rem;
-}
-
-.speakers-container .speaker-info {
-  padding-top: 3rem;
-  font: 1.6rem var(--lato);
-}
-
-.speaker-info .language,
-.speaker-info .name {
-  all: unset;
-  display: block;
-  text-align: left;
-}
-
-.speakers-container .title {
-  color: var(--color-red);
-}
-
-.speakers-container .speaker-description {
-  padding: 0 2rem;
-  text-align: left;
-  font-size: 1.6rem;
-}
-
-#teachers button {
-  display: block;
-  width: 84%;
-  max-width: 80rem;
-  padding: 1.4rem;
-  margin: 2rem auto 0;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  background-color: white;
-  border: 0.1rem solid var(--color-gray);
-  cursor: pointer;
-}
-
-#teachers button img {
-  transform: rotate(-90deg);
+.partners-container img {
+  width: 16rem;
 }
 
 #partners div {
@@ -421,24 +355,7 @@ footer p {
   }
 
   div.hero-wrapper {
-    background: url(../img/backgrounds/desktop_intro_bg.png) top center no-repeat;
-  }
-
-  .lessons-container {
-    flex-direction: row;
-    max-width: 152.4rem;
-  }
-
-  .lessons-container article {
-    flex-direction: column;
-  }
-
-  .speakers-container {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 120rem;
-    margin: 0 auto;
+    background: url(../img/backgrounds/about_bg_01.png) top center no-repeat;
   }
 
   .partners-container {
