@@ -57,7 +57,6 @@ div.logo-wrapper {
   border-bottom: 0.1rem solid var(--color-gray);
   color: var(--color-black);
   font: 300 1.4rem var(--lato);
-  border-bottom: 0.1rem solid var(--color-gray);
 }
 
 div.partners-wrapper {
@@ -84,6 +83,12 @@ div.partners-wrapper {
 .mobile-menu .background {
   background-color: var(--color-black);
   opacity: 0.96;
+}
+
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
 .mobile-menu div:not(.background) > a {
@@ -116,6 +121,11 @@ footer p {
   font-size: 1.6rem;
 }
 
+#logo p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
 #hero p:first-child {
   font: 400 2.4rem/3.2rem var(--lato);
 }
@@ -144,12 +154,6 @@ footer p {
   color: var(--color-black);
 }
 
-.mobile-menu ul a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.4rem;
-}
-
 .mobile-menu ul li a:hover {
   color: var(--color-red);
 }
@@ -167,11 +171,6 @@ footer p {
 
 #partners h2 {
   color: var(--color-white);
-}
-
-#logo p {
-  font-size: 1.6rem;
-  margin-bottom: 3rem;
 }
 
 .partners-container img {
@@ -206,14 +205,14 @@ footer p {
 
 #past-courses #python-conference {
   background-image:
-    linear-gradient(to bottom, rgba(208,99,79, 0.75), rgba(208,99,79, 0.75)),
+    linear-gradient(to bottom,rgba(208,99,79, 0.75),rgba(208,99,79, 0.75)),
     url(../img/backgrounds/python_conference.png);
   margin-bottom: 5rem;
 }
 
 #past-courses #php-conference {
   background-image:
-    linear-gradient(to bottom, rgba(208,99,79, 0.75), rgba(208,99,79, 0.75)),
+    linear-gradient(to bottom,rgba(208,99,79, 0.75),rgba(208,99,79, 0.75)),
     url(../img/backgrounds/php_conference.png);
 }
 
