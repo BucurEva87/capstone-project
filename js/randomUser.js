@@ -26,7 +26,7 @@ async function populateUsers(speakers) {
         tagName: 'img',
         src: speaker.picture,
         alt: `Image for ${speaker.name}`,
-      })
+      }),
     );
 
     const div = utils.createElement({
@@ -38,21 +38,21 @@ async function populateUsers(speakers) {
         tagName: 'h3',
         class: 'name',
         textContent: speaker.name,
-      })
+      }),
     );
     div.appendChild(
       utils.createElement({
         tagName: 'h3',
         class: 'language',
         textContent: language,
-      })
+      }),
     );
     div.appendChild(
       utils.createElement({
         tagName: 'p',
         class: 'title',
         textContent: `Professor of ${language}`,
-      })
+      }),
     );
     article.appendChild(div);
 
@@ -71,7 +71,7 @@ async function populateUsers(speakers) {
           .replaceAll('[gender]', speaker.gender === 'male' ? 'he' : 'she')
           .replaceAll('[name]', speaker.name)
           .replaceAll('[language]', language),
-      })
+      }),
     );
 
     container.appendChild(article);
@@ -85,7 +85,7 @@ async function populateUsers(speakers) {
       tagName: 'img',
       src: './img/burger/arrow_down.png',
       alt: 'More speakers',
-    })
+    }),
   );
 }
 
