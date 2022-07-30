@@ -363,6 +363,12 @@ footer {
     background: url(../img/backgrounds/about_bg_01.png) top center no-repeat;
   }
 
+  .conference-container {
+    display: flex;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
   .partners-container {
     display: flex;
     flex-direction: row;
