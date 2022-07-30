@@ -144,6 +144,16 @@ footer p {
   color: var(--color-black);
 }
 
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--color-red);
+}
+
 #hero p.location a {
   text-decoration: none;
   color: var(--color-black);
@@ -273,20 +283,10 @@ footer {
   padding-bottom: 1rem;
 }
 
-.mobile-menu ul a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.4rem;
-}
-
 .mobile-menu ul li a.nav-button {
   color: var(--color-red);
   border: 0.5rem solid var(--color-red);
   padding: 0.5rem;
-}
-
-.mobile-menu ul li a:hover {
-  color: var(--color-red);
 }
 
 @media screen and (min-width: 768px) {
