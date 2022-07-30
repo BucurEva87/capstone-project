@@ -87,6 +87,10 @@ div.partners-wrapper {
   text-align: center;
 }
 
+footer p {
+  font-size: 1.6rem;
+}
+
 #hero p:first-child {
   color: var(--color-red);
   font: 400 2.4rem/3.2rem var(--lato);
@@ -170,6 +174,44 @@ div.partners-wrapper {
   text-align: justify;
 }
 
+.mobile-menu ul {
+  position: relative;
+  width: 96%;
+  top: 4rem;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu ul li {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0 0 2rem;
+  display: flex;
+}
+
+.mobile-menu ul li:last-child {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobile-menu ul li a.nav-button {
+  color: var(--color-red);
+  border: 0.5rem solid var(--color-red);
+  padding: 0.5rem;
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--color-red);
+}
+
 #lessons > a {
   margin-top: 2rem;
   padding-right: 1rem;
@@ -194,6 +236,10 @@ div.partners-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+}
+
+.partners-container img {
+  width: 16rem;
 }
 
 .speakers-container article img {
@@ -238,6 +284,17 @@ div.partners-wrapper {
   cursor: pointer;
 }
 
+#scrollToTop {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  text-align: right;
+}
+
+#scrollToTop img {
+  width: 30%;
+}
+
 #teachers button img {
   transform: rotate(-90deg);
 }
@@ -253,19 +310,11 @@ div.partners-wrapper {
   justify-content: center;
 }
 
-.partners-container img {
-  width: 16rem;
-}
-
 footer {
   padding: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-footer p {
-  font-size: 1.6rem;
 }
 
 .bar {
@@ -314,55 +363,6 @@ footer p {
 
 .hidden {
   display: none;
-}
-
-#scrollToTop {
-  position: fixed;
-  bottom: 3rem;
-  right: 1rem;
-  text-align: right;
-}
-
-#scrollToTop img {
-  width: 30%;
-}
-
-.mobile-menu ul {
-  position: relative;
-  width: 96%;
-  top: 4rem;
-  margin: 0 auto;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.mobile-menu ul li {
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
-  padding: 1rem 0 0 2rem;
-  display: flex;
-}
-
-.mobile-menu ul li:last-child {
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 1rem;
-}
-
-.mobile-menu ul a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.4rem;
-}
-
-.mobile-menu ul li a.nav-button {
-  color: var(--color-red);
-  border: 0.5rem solid var(--color-red);
-  padding: 0.5rem;
-}
-
-.mobile-menu ul li a:hover {
-  color: var(--color-red);
 }
 
 @media screen and (min-width: 768px) {
