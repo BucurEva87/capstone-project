@@ -17,7 +17,7 @@
 
 ## Live Preview
 
-![Live Preview]()
+![Live Preview](https://i.postimg.cc/tCTs5PLs/download-1.png)
 
 ## Author
 
