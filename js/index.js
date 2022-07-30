@@ -1,5 +1,5 @@
 import utils from './utils.js';
-import { grabRandomUser } from './randomUser.js';
+import grabRandomUser from './randomUser.js';
 
 const burgerMenuIcon = utils.qs('header img');
 const burgerMenuIconClose = utils.qs('.mobile-menu img');
