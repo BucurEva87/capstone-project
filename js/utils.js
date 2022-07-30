@@ -16,9 +16,9 @@ export default {
       }
       // Property is a data attribute (these are key-value pairs in the obj)
       else if (prop === 'data' && typeof value === 'object') {
-        Object.entries(value).forEach(
-          ([prop, value]) => (element.dataset[prop] = value)
-        );
+        Object.entries(value).forEach(([prop, value]) => {
+          element.dataset[prop] = value;
+        });
       }
       // Any other non-special property can be set directly
       else {
