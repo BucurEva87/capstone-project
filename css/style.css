@@ -101,7 +101,6 @@ footer p {
   background: url(../img/backgrounds/main_text_image_bg.jpg) no-repeat top left;
   background-size: 150%;
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
 }
 
@@ -112,7 +111,7 @@ footer p {
   font: 300 1.3rem/220% var(--lato);
   text-align: justify;
   border: 0.4rem solid white;
-  background-color: #F4F4F5
+  background-color: #f4f4f5;
 }
 
 #hero p.location {
@@ -138,12 +137,6 @@ footer p {
   gap: 0.5rem;
   width: 96%;
   margin: 0 auto;
-}
-
-.speakers-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .lesson {
@@ -206,6 +199,13 @@ footer p {
   color: var(--color-red);
   border: 0.5rem solid var(--color-red);
   padding: 0.5rem;
+}
+
+.mobile-menu div:not(.background) > a {
+  z-index: 200;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
 }
 
 .mobile-menu ul li a:hover {
@@ -346,13 +346,6 @@ footer {
 .mobile-menu .background {
   background-color: var(--color-black);
   opacity: 0.96;
-}
-
-.mobile-menu div:not(.background) > a {
-  z-index: 200;
-  position: absolute;
-  top: 1rem;
-  right: 3rem;
 }
 
 .mobile-menu.hidden,
