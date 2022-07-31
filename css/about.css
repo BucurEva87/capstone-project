@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+@font-face {
+  font-family: 'COCOGOOSE';
+  font-style: normal;
+  font-weight: 400;
+  src: local('COCOGOOSE'), url('https://fonts.cdnfonts.com/s/26936/cocogoose_trial.woff') format('woff');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #272a31;
+  --color-another-black: #575757;
+  --color-gray: #d3d3d3;
+  --color-another-gray: #f4f4f5;
+  --color-red: #ec5242;
+  --color-white: #ececed;
+  --lato: 'Lato', sans-serif;
+  --cocogoose: 'COCOGOOSE', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+  color: var(--color-another-black);
+}
+
+header {
+  height: 5.5rem;
+  margin: 1.6rem 0;
+  text-align: center;
+}
+
+#burger-menu {
+  position: absolute;
+  width: 4%;
+  top: 4%;
+  left: 4%;
+  max-width: 2rem;
+}
+
+div.wrapper {
+  width: 100%;
+}
+
+div.hero-wrapper {
+  background: #f7f7f7 url(../img/backgrounds/about_bg_01.png) top left no-repeat;
+}
+
+div.logo-wrapper {
+  padding-bottom: 3.5rem;
+  border-bottom: 0.1rem solid var(--color-gray);
+  color: var(--color-black);
+  font: 300 1.4rem var(--lato);
+}
+
+div.partners-wrapper {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+.mobile-menu {
+  transition: left;
+  z-index: 100;
+}
+
+.mobile-menu,
+.mobile-menu .background {
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left 1s;
+}
+
+.mobile-menu .background {
+  background-color: var(--color-black);
+  opacity: 0.96;
+}
+
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobile-menu div:not(.background) > a {
+  z-index: 200;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+}
+
+.mobile-menu.hidden,
+.mobile-menu .background.hidden {
+  left: -80vw;
+  transition: left 1s;
+}
+
+#hero {
+  padding-top: 5.1rem;
+  text-align: center;
+  color: var(--color-red);
+}
+
+#logo,
+#past-courses {
+  padding-top: 7.9rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.6rem;
+}
+
+#logo p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+#hero p:first-child {
+  font: 400 2.4rem/3.2rem var(--lato);
+}
+
+#hero h1 {
+  font: 400 3.6rem/4.8rem var(--cocogoose);
+}
+
+#hero p.description {
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 90rem;
+  padding: 1rem;
+  font: 300 1.3rem/220% var(--lato);
+  text-align: justify;
+  border: 0.2rem solid #e7e7e7;
+  background-color: white;
+  color: var(--color-black);
+}
+
+#hero p.location {
+  margin-top: 2rem;
+  padding: 4rem 0;
+  text-align: center;
+  font: normal 1.4rem var(--lato);
+  color: var(--color-black);
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--color-red);
+}
+
+#hero p.location a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+#lessons h2,
+#partners h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+#partners h2 {
+  color: var(--color-white);
+}
+
+.partners-container img {
+  width: 16rem;
+}
+
+#logo img {
+  width: 30rem;
+  padding: 3rem 5rem;
+  border: 0.1rem solid var(--color-gray);
+}
+
+#past-courses #python-conference,
+#past-courses #php-conference {
+  width: 45.5rem;
+  height: 25.2rem;
+  margin: 0 auto;
+  font: 2.4rem var(--lato);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#past-courses h3 {
+  font-size: 1.8rem;
+  margin-top: 1.6rem;
+}
+
+#past-courses #python-conference {
+  background-image:
+    linear-gradient(to bottom, rgba(208, 99, 79, 0.75), rgba(208, 99, 79, 0.75)),
+    url(../img/backgrounds/python_conference.png);
+  margin-bottom: 5rem;
+}
+
+#past-courses #php-conference {
+  background-image:
+    linear-gradient(to bottom, rgba(208, 99, 79, 0.75), rgba(208, 99, 79, 0.75)),
+    url(../img/backgrounds/php_conference.png);
+}
+
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#partners div {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+footer {
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 5.3rem;
+  height: 1.6rem;
+  border-bottom: 0.1rem solid var(--color-red);
+  margin: 0 auto 5.4rem;
+}
+
+.desktop-visible {
+  display: none;
+}
+
+.notThere {
+  display: none;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  text-align: right;
+}
+
+#scrollToTop img {
+  width: 30%;
+}
+
+.mobile-menu ul {
+  position: relative;
+  width: 96%;
+  top: 4rem;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu ul li {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0 0 2rem;
+  display: flex;
+}
+
+.mobile-menu ul li:last-child {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.mobile-menu ul li a.nav-button {
+  color: var(--color-red);
+  border: 0.5rem solid var(--color-red);
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-visible {
+    all: unset;
+  }
+
+  .header-bar {
+    padding: 2rem 0;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-bar ul {
+    display: flex;
+    list-style-type: none;
+    color: var(--color-white);
+    gap: 2rem;
+    margin-right: 10%;
+  }
+
+  .header-bar ul li {
+    padding: 0 1rem;
+  }
+
+  .header-bar ul a {
+    text-decoration: none;
+    color: white;
+    font: 2rem var(--lato);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+
+  header ul.desktop-visible {
+    display: flex;
+    list-style-type: none;
+    gap: 2.5vw;
+  }
+
+  header ul.desktop-visible li a {
+    text-decoration: none;
+    font: 1.6rem var(--lato);
+    color: var(--color-another-black);
+  }
+
+  header ul.desktop-visible li a.nav-button {
+    color: var(--color-red);
+    border: 0.5rem solid var(--color-red);
+    padding: 0.5rem;
+  }
+
+  header ul.desktop-visible li a:hover {
+    color: var(--color-red);
+  }
+
+  div.hero-wrapper {
+    background: url(../img/backgrounds/about_bg_01.png) top center no-repeat;
+  }
+
+  .conference-container {
+    display: flex;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .partners-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer {
+    margin: 0 auto;
+    background-color: var(--color-black);
+    color: white;
+  }
+}
