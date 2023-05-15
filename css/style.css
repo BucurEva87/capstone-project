@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+@font-face {
+  font-family: 'COCOGOOSE';
+  font-style: normal;
+  font-weight: 400;
+  src: local('COCOGOOSE'), url('https://fonts.cdnfonts.com/s/26936/cocogoose_trial.woff') format('woff');
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #272a31;
+  --color-another-black: #575757;
+  --color-gray: #d3d3d3;
+  --color-another-gray: #f4f4f5;
+  --color-red: #ec5242;
+  --color-white: #ececed;
+  --lato: 'Lato', sans-serif;
+  --cocogoose: 'COCOGOOSE', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+  color: var(--color-another-black);
+}
+
+header {
+  height: 5.5rem;
+  margin: 1.6rem 0;
+  text-align: center;
+}
+
+#burger-menu {
+  position: absolute;
+  width: 4%;
+  top: 4%;
+  left: 4%;
+  max-width: 2rem;
+}
+
+div.wrapper {
+  width: 100%;
+}
+
+div.hero-wrapper {
+  background: url(../img/backgrounds/mobile_intro_bg.png) top center no-repeat;
+}
+
+div.lessons-wrapper {
+  background: var(--color-black) url(../img/backgrounds/main_section_bg.png) repeat;
+  padding-bottom: 8rem;
+  color: white;
+  font: 300 1.4rem var(--lato);
+}
+
+div.teachers-wrapper {
+  padding-bottom: 3.5rem;
+  border-bottom: 0.1rem solid var(--color-gray);
+  color: var(--color-black);
+  font: 300 1.4rem var(--lato);
+}
+
+div.partners-wrapper {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+#hero {
+  padding-top: 5.1rem;
+  margin: 0 10%;
+}
+
+#lessons {
+  margin: 1.6rem 0;
+  padding-top: 4rem;
+}
+
+#teachers {
+  padding-top: 7.9rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.6rem;
+}
+
+#hero p:first-child {
+  color: var(--color-red);
+  font: 400 2.4rem/3.2rem var(--lato);
+}
+
+#hero h1 {
+  font: 400 3.6rem/4.8rem var(--cocogoose);
+  background: url(../img/backgrounds/main_text_image_bg.jpg) no-repeat top left;
+  background-size: 150%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#hero p.description {
+  margin: 1.7rem 0;
+  width: calc(100% + 2.5rem);
+  padding: 1rem;
+  font: 300 1.3rem/220% var(--lato);
+  text-align: justify;
+  border: 0.4rem solid white;
+  background-color: #f4f4f5;
+}
+
+#hero p.location {
+  margin-top: 2rem;
+  padding: 4rem 0;
+  text-align: center;
+  font: normal 1.4rem var(--cocogoose);
+}
+
+#lessons h2,
+#partners h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+#partners h2 {
+  color: var(--color-white);
+}
+
+.lessons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.lesson {
+  display: flex;
+  padding: 1.6rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lesson .icon object {
+  filter: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(88%) hue-rotate(174deg) brightness(87%) contrast(92%);
+  transition: filter 1s;
+}
+
+.lesson .icon object:hover {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(15%) saturate(5170%) hue-rotate(332deg) brightness(94%) contrast(96%);
+}
+
+#lessons .name h2 {
+  font-size: 1.8rem;
+  color: var(--color-red);
+  min-width: 8rem;
+}
+
+.lesson .description {
+  text-align: justify;
+}
+
+.mobile-menu ul {
+  position: relative;
+  width: 96%;
+  top: 4rem;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu ul li {
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 0 0 2rem;
+  display: flex;
+}
+
+.mobile-menu ul li:last-child {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.mobile-menu ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobile-menu ul li a.nav-button {
+  color: var(--color-red);
+  border: 0.5rem solid var(--color-red);
+  padding: 0.5rem;
+}
+
+.mobile-menu div:not(.background) > a {
+  z-index: 200;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--color-red);
+}
+
+#lessons > a {
+  margin-top: 2rem;
+  padding-right: 1rem;
+  font-size: 2.2rem;
+  color: white;
+  text-align: right;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+#lessons > a::after {
+  content: ' >';
+}
+
+.speakers-container {
+  max-width: 80rem;
+  padding: 0 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.speakers-container article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.partners-container img {
+  width: 16rem;
+}
+
+.speakers-container article img {
+  width: 40%;
+  background: url('../img/chess_board_pattern.svg') no-repeat;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.speakers-container .speaker-info {
+  padding-top: 3rem;
+  font: 1.6rem var(--lato);
+}
+
+.speaker-info .language,
+.speaker-info .name {
+  all: unset;
+  display: block;
+  text-align: left;
+}
+
+.speakers-container .title {
+  color: var(--color-red);
+}
+
+.speakers-container .speaker-description {
+  padding: 0 2rem;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+#teachers button {
+  display: block;
+  width: 84%;
+  max-width: 80rem;
+  padding: 1.4rem;
+  margin: 2rem auto 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  background-color: white;
+  border: 0.1rem solid var(--color-gray);
+  cursor: pointer;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  text-align: right;
+}
+
+#scrollToTop img {
+  width: 30%;
+}
+
+#teachers button img {
+  transform: rotate(-90deg);
+}
+
+#partners div {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer {
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 5.3rem;
+  height: 1.6rem;
+  border-bottom: 0.1rem solid var(--color-red);
+  margin: 0 auto 5.4rem;
+}
+
+.desktop-visible {
+  display: none;
+}
+
+.mobile-menu {
+  transition: left;
+  z-index: 100;
+}
+
+.mobile-menu,
+.mobile-menu .background {
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: left 1s;
+}
+
+.mobile-menu .background {
+  background-color: var(--color-black);
+  opacity: 0.96;
+}
+
+.mobile-menu.hidden,
+.mobile-menu .background.hidden {
+  left: -80vw;
+  transition: left 1s;
+}
+
+.notThere {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-visible {
+    all: unset;
+  }
+
+  .header-bar {
+    padding: 2rem 0;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-bar ul {
+    display: flex;
+    list-style-type: none;
+    color: var(--color-white);
+    gap: 2rem;
+    margin-right: 10%;
+  }
+
+  .header-bar ul li {
+    padding: 0 1rem;
+  }
+
+  .header-bar ul a {
+    text-decoration: none;
+    color: white;
+    font: 2rem var(--lato);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+
+  header ul.desktop-visible {
+    display: flex;
+    list-style-type: none;
+    gap: 2.5vw;
+  }
+
+  header ul.desktop-visible li a {
+    text-decoration: none;
+    font: 1.6rem var(--lato);
+    color: var(--color-another-black);
+  }
+
+  header ul.desktop-visible li a.nav-button {
+    color: var(--color-red);
+    border: 0.5rem solid var(--color-red);
+    padding: 0.5rem;
+  }
+
+  header ul.desktop-visible li a:hover {
+    color: var(--color-red);
+  }
+
+  div.hero-wrapper {
+    background: url(../img/backgrounds/desktop_intro_bg.png) top center no-repeat;
+  }
+
+  .lessons-container {
+    flex-direction: row;
+    max-width: 152.4rem;
+  }
+
+  .lessons-container article {
+    flex-direction: column;
+  }
+
+  #lessons > a {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  #lessons > a::after {
+    content: '';
+  }
+
+  .speakers-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  .partners-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
